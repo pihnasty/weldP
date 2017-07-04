@@ -1,5 +1,7 @@
-package chapter02.ex01;
+package charter02.ex03;
 
+
+import java.util.Random;
 
 /**
  * @author Antonio Goncalves
@@ -8,11 +10,13 @@ package chapter02.ex01;
  *         http://www.antoniogoncalves.org
  *         --
  */
-public interface NumberGenerator01 {
+public class IsbnGenerator03 implements NumberGenerator03 {
 
   // ======================================
   // =          Business methods          =
   // ======================================
 
-  String generateNumber();
+  public String generateNumber() {
+    return "13-84356-" + Math.abs(new Random().nextInt());
+  }
 }

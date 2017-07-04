@@ -1,8 +1,6 @@
-package chapter02;
+package charter02.ex04;
 
 import javax.inject.Inject;
-import java.util.Random;
-import java.util.logging.Logger;
 
 /**
  * @author Antonio Goncalves
@@ -11,24 +9,22 @@ import java.util.logging.Logger;
  *         http://www.antoniogoncalves.org
  *         --
  */
-@EightDigits
-public class IssnGenerator implements NumberGenerator {
+public class BookService04 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
 
   @Inject
-  private Logger logger;
+  private NumberGenerator04 numberGenerator;
 
   // ======================================
   // =          Business methods          =
   // ======================================
 
-  @Loggable
-  public String generateNumber() {
-    String issn =  "8-" + Math.abs(new Random().nextInt());
-    logger.info("Generated ISBN : " + issn);
-    return issn;
+  public Book04 createBook(String title, Float price, String description) {
+    Book04 book = new Book04(title, price, description);
+    book.setIsbn(numberGenerator.generateNumber());
+    return book;
   }
 }

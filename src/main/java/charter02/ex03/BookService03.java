@@ -1,4 +1,4 @@
-package chapter02.ex02;
+package charter02.ex03;
 
 /**
  * @author Antonio Goncalves
@@ -7,28 +7,28 @@ package chapter02.ex02;
  *         http://www.antoniogoncalves.org
  *         --
  */
-public class BookService02 {
+public class BookService03 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
 
-  private NumberGenerator02 numberGenerator;
+  private NumberGenerator03 numberGenerator;
 
   // ======================================
   // =            Constructors            =
   // ======================================
 
-  public BookService02() {
-    this.numberGenerator = new IsbnGenerator02();
+  public BookService03(NumberGenerator03 numberGenerator) {
+    this.numberGenerator = numberGenerator;
   }
 
   // ======================================
   // =          Business methods          =
   // ======================================
 
-  public Book02 createBook(String title, Float price, String description) {
-    Book02 book = new Book02(title, price, description);
+  public Book03 createBook(String title, Float price, String description) {
+    Book03 book = new Book03(title, price, description);
     book.setIsbn(numberGenerator.generateNumber());
     return book;
   }

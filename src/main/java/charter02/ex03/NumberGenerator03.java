@@ -1,4 +1,4 @@
-package chapter02.ex02;
+package charter02.ex03;
 
 
 /**
@@ -8,7 +8,7 @@ package chapter02.ex02;
  *         http://www.antoniogoncalves.org
  *         --
  */
-public interface NumberGenerator02 {
+public interface NumberGenerator03 {
 
   // ======================================
   // =          Business methods          =

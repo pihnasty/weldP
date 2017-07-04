@@ -1,4 +1,4 @@
-package chapter02.ex02;
+package charter02.ex04;
 
 
 import java.util.Random;
@@ -10,7 +10,7 @@ import java.util.Random;
  *         http://www.antoniogoncalves.org
  *         --
  */
-public class IsbnGenerator02 implements NumberGenerator02 {
+public class IsbnGenerator04 implements NumberGenerator04 {
 
   // ======================================
   // =          Business methods          =

@@ -1,4 +1,4 @@
-package chapter02.ex02;
+package charter02.ex04;
 
 /**
  * @author Antonio Goncalves
@@ -7,7 +7,7 @@ package chapter02.ex02;
  *         http://www.antoniogoncalves.org
  *         --
  */
-public class Book02 {
+public class Book04 {
 
   // ======================================
   // =             Attributes             =
@@ -22,10 +22,10 @@ public class Book02 {
   // =            Constructors            =
   // ======================================
 
-  public Book02() {
+  public Book04() {
   }
 
-  public Book02(String title, Float price, String description) {
+  public Book04(String title, Float price, String description) {
     this.title = title;
     this.price = price;
     this.description = description;
@@ -74,7 +74,7 @@ public class Book02 {
   @Override
   public String toString() {
     final StringBuilder sb = new StringBuilder();
-    sb.append("Book02");
+    sb.append("Book04");
     sb.append(", title='").append(title).append('\'');
     sb.append(", price=").append(price);
     sb.append(", description='").append(description).append('\'');

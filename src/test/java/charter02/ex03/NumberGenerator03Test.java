@@ -1,7 +1,4 @@
-package chapter02.ex01;
-
-import chapter02.ex02.Book02;
-import chapter02.ex02.BookService02;
+package charter02.ex03;
 
 import org.junit.Test;
 
@@ -14,7 +11,7 @@ import static org.junit.Assert.assertTrue;
  *         http://www.antoniogoncalves.org
  *         --
  */
-public class Book01Test {
+public class NumberGenerator03Test {
 
   // ======================================
   // =              Methods               =
@@ -22,15 +19,15 @@ public class Book01Test {
 
   @Test
   public void shouldCheckNumberIsThirteenDigits() {
-
-    BookService02 bookService;
-    bookService = new BookService02();
-
-    Book02 book = bookService.createBook("H2G2", 12.5f, "Geeky scifi Book");
-
-    System.out.println(book.toString());
-
-
+    BookService03 bookService = new BookService03(new IsbnGenerator03());
+    Book03 book = bookService.createBook("H2G2", 12.5f, "Geeky scifi Book");
     assertTrue(book.getIsbn().startsWith("13"));
+  }
+
+  @Test
+  public void shouldCheckNumberIsEightDigits() {
+    BookService03 bookService = new BookService03(new IssnGenerator03());
+    Book03 book = bookService.createBook("H2G2", 12.5f, "Geeky scifi Book");
+    assertTrue(book.getIsbn().startsWith("8"));
   }
 }
